@@ -1,8 +1,11 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 
-mongoose.connect("mongodb+srv://mo:momo@cluster0.swqyn.mongodb.net/")
+dotenv.config()
+
+mongoose.connect(process.env.Mongo_URL)
 .then(()=> console.log("db connected successfully"))
 .catch((err) => {console.log(err)})
 app.listen(5000, ()=> {
