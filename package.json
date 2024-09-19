@@ -1,0 +1,27 @@
+{
+  "name": "E_commerce",
+  "version": "1.0.0",
+  "description": "E-commerce project using Express and mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":" nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muhammed-Elsayed/E-commerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muhammed-Elsayed/E-commerce/issues"
+  },
+  "homepage": "https://github.com/Muhammed-Elsayed/E-commerce#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.6.3",
+    "nodemon": "^3.1.6"
+  }
+}
