@@ -74,6 +74,25 @@ After starting the server, you can use tools like **Postman** or **cURL** to tes
 
 ## API Endpoints
 
+## User Endpoints
+
+1. **Create User**
+   - **Endpoint:** `/api/users`
+   - **Method:** `POST`
+
+2. **Get User by ID**
+   - **Endpoint:** `/api/users/:id`
+   - **Method:** `GET`
+
+
+3. **Update User**
+   - **Endpoint:** `/api/users/:id`
+   - **Method:** `PUT`
+
+4. **Delete User**
+   - **Endpoint:** `/api/users/:id`
+   - **Method:** `DELETE`
+
 ### Auth
 
 - **POST** `/api/auth/register` - Register a new user
