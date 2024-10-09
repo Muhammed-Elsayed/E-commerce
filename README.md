@@ -98,6 +98,4 @@ After starting the server, you can use tools like **Postman** or **cURL** to tes
 - **GET** `/api/cart` - Get cart items
 - **DELETE** `/api/cart/:id` - Remove item from cart
 
-## License
 
-This project is licensed under the MIT License.
