@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const authRoute = require("./routes/auth")
+const authRoute = require("./routes/auth");
+const userRoute = require("./routes/user");
 dotenv.config()
 
 mongoose.connect(process.env.Mongo_URL)
@@ -12,8 +13,10 @@ mongoose.connect(process.env.Mongo_URL)
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
+app.use("/api/user", userRoute)
 
-app.use("/api/auth", authRoute)
+app.use("/api/auth", authRoute);
+
 
 
 app.listen(5000, ()=> {

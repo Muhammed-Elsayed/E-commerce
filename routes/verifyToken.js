@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const User = require("../models/User");
 
 const verifyToken =(req, res, next) => {
   const header = req.headers.token;
@@ -6,7 +7,7 @@ const verifyToken =(req, res, next) => {
     const token = header.split(" ")[1] 
     jwt.verify(token, process.env.JWT_SEC, (err, user)=>{
       if(err) res.status(401).json("token is invalid");
-      req.user = 
+      req.user = user;
       next()
     })
 
@@ -15,17 +16,15 @@ const verifyToken =(req, res, next) => {
   }
   
 }
-
-const verifyTokenAndAuthorization = (req, res, next)=>{
+const verifyTokenAndAuthorization = (req, res, next) => {
   verifyToken(req, res, () => {
-    if (req.user.id == req.params.id || req.user.isadmin){
-      next()
-    }else{
-      res.status(401).json("U R not allowed to do that")
+    if (req.user.id === req.params.id || req.user.isAdmin) {
+      next();
+    } else {
+      res.status(403).json("You are not alowed to do that!");
     }
-  })
-
-}
+  });
+};
 
 const verifyTokenAndAdmin = (req, res, next) => {
   verifyToken(req, res, () => {
