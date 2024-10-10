@@ -39,8 +39,8 @@ This project is a comprehensive e-commerce REST API built using **Node.js** and 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com//ecommerce-api.git
-   cd ecommerce-api
+   git clone https://github.com/Muhammed-Elsayed/E-commerce
+   cd E-commerce
    ```
 
 2. Install the dependencies:
