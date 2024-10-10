@@ -61,7 +61,12 @@ This project is a comprehensive e-commerce REST API built using **Node.js** and 
 
 Create a `.env` file in the root directory and add the following environment variables:
 
-
+```bash
+PORT=5000
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+STRIPE_SECRET_KEY=your_stripe_secret_key
+```
 
 ## Usage
 
