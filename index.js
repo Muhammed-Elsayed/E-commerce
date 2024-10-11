@@ -6,6 +6,7 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/user");
 const productRoute = require("./routes/product")
 const cartRoute = require("./routes/cart")
+const orderRoute = require("./routes/order")
 dotenv.config()
 
 mongoose.connect(process.env.Mongo_URL)
@@ -19,6 +20,7 @@ app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/product", productRoute);
 app.use("/api/cart", cartRoute);
+app.use("/api/order", orderRoute);
 
 
 app.listen(5000, ()=> {
